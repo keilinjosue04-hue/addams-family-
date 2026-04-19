@@ -146,7 +146,6 @@
       }
     }
 
-  
     /* Spiders */
     .spiders {
       position: absolute;
@@ -166,7 +165,6 @@
       justify-content: center;
     }
 
-    /* Spider body */
     .spider::after {
       content: "";
       position: absolute;
@@ -177,7 +175,6 @@
       border-radius: 50%;
     }
 
-    /* Spider legs */
     .spider::before {
       content: "";
       position: absolute;
@@ -194,7 +191,6 @@
       transition: transform 0.3s ease;
     }
 
-    /* Hover makes spiders drop */
     header:hover .spider {
       transform: translateY(60px);
     }
@@ -205,7 +201,6 @@
       100% { transform: translateY(0) rotate(0deg); }
     }
 
-    /* Corner webs */
     .web {
       position: fixed;
       width: 120px;
@@ -224,8 +219,6 @@
       transform: scaleX(-1);
     }
 
-  
-    /* Logo */
     .logo-container {
       position: absolute;
       top: 15px;
@@ -237,11 +230,38 @@
       object-fit: contain;
     }
 
+    /* Instagram button (added safely) */
+    .instagram-link {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      font-size: 28px;
+      text-decoration: none;
+      color: white;
+      background: radial-gradient(circle at 30% 30%, #feda75, #d62976, #962fbf, #4f5bd5);
+      border-radius: 50%;
+      padding: 12px 14px;
+      box-shadow: 0 5px 15px rgba(0,0,0,0.25);
+      transition: all 0.3s ease;
+      animation: float 3s ease-in-out infinite;
+    }
+
+    .instagram-link:hover {
+      transform: scale(1.2) rotate(8deg);
+      box-shadow: 0 0 20px rgba(214,41,118,0.6),
+                  0 0 30px rgba(150,47,191,0.4);
+    }
+
+    @keyframes float {
+      0% { transform: translateY(0); }
+      50% { transform: translateY(-6px); }
+      100% { transform: translateY(0); }
+    }
+
   </style>
 </head>
 <body>
 
-<!-- Corner spider webs -->
 <img src="https://i.imgur.com/6X4R6bP.png" class="web left">
 <img src="https://i.imgur.com/6X4R6bP.png" class="web right">
 
@@ -253,7 +273,7 @@
   <p class="fade-in">Forest Hills High School</p>
 
   <a href="https://events.ticketleap.com/events/fhhs-0/the-addams-family" target="_blank" class="ticket-btn">Buy Tickets</a>
-  <!-- Hanging spiders -->
+
   <div class="spiders">
     <div class="spider" style="left:15%; animation-delay:0s;"></div>
     <div class="spider" style="left:35%; animation-delay:1s;"></div>
@@ -306,6 +326,13 @@
 <footer>
   <p>© 2026 School Project - The Addams Family</p>
 </footer>
+
+<!-- Instagram Icon (added safely) -->
+<a href="https://www.instagram.com/addams_at_fhhs" target="_blank" class="instagram-link">
+  <i class="fab fa-instagram"></i>
+</a>
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 
 </body>
 </html>
